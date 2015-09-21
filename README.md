@@ -86,6 +86,6 @@ All of the parameters except for `UPDATE_TEXT` are optional.  For more informati
 
 ## Changelog
 
-### 1.0.0 -- 6/18/2015
+### 1.0.0 -- 9/21/2015
 
 * Initial release
