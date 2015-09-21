@@ -1,0 +1,83 @@
+{% import "_includes/forms" as forms %}
+
+<p>Please see <a href="https://buffer.com/developers/api/" target="_blank">The Buffer API</a> for details on how to set up your Buffer app for API access.</p>
+
+{{ forms.textField({
+	label: 'Buffer Access Token',
+	instructions: 'Enter your Buffer access token.',
+	id: 'bufferAccessToken',
+	name: 'bufferAccessToken', 
+	value: settings['bufferAccessToken']})
+}}
+
+{{ forms.textField({
+	label: 'Buffer Client ID',
+	instructions: 'Enter your Buffer Client ID.',
+	id: 'bufferClientId',
+	name: 'bufferClientId',
+	value: settings['bufferClientId']})
+}}
+
+{{ forms.textField({
+	label: 'Buffer Client Secret',
+	instructions: 'Enter your Buffer client secret.',
+	id: 'bufferClientSecret',
+	name: 'bufferClientSecret',
+	value: settings['bufferClientSecret']})
+}}
+
+{{ forms.textField({
+	label: 'Buffer Redirect URI',
+	instructions: 'Enter your Buffer redirect URI.',
+	id: 'bufferRedirectUri',
+	name: 'bufferRedirectUri',
+	value: settings['bufferRedirectUri']})
+}}
+
+<hr />
+
+<p>Fill in the Profile IDs for your social media accounts.  You can find out each profile’s id from your dashboard, click on each social profile tab and notice the URL in browser, it will be something like this:</p>
+
+<p><tt>https://bufferapp.com/app/profile/SOCIALPROFILEID/buffer</tt></p>
+
+<p>The string between “/profile/” & “/buffer/” is the social profile id</p>
+
+{{ forms.textField({
+	label: 'Twitter Profile ID',
+	instructions: 'Enter your Twitter Profile ID.',
+	id: 'twitterProfileId',
+	name: 'twitterProfileId',
+	value: settings['twitterProfileId']})
+}}
+
+{{ forms.textField({
+	label: 'Facebook Profile ID',
+	instructions: 'Enter your Facebook Profile ID.',
+	id: 'facebookProfileId',
+	name: 'facebookProfileId',
+	value: settings['facebookProfileId']})
+}}
+
+{{ forms.textField({
+	label: 'Google+ ID',
+	instructions: 'Enter your Google+ Profile ID.',
+	id: 'googlePlusProfileId',
+	name: 'googlePlusProfileId',
+	value: settings['googlePlusProfileId']})
+}}
+
+{{ forms.textField({
+	label: 'Pinterest ID',
+	instructions: 'Enter your Pinterest Profile ID.',
+	id: 'pinterestProfileId',
+	name: 'pinterestProfileId',
+	value: settings['pinterestProfileId']})
+}}
+
+{{ forms.textField({
+	label: 'LinkedIn ID',
+	instructions: 'Enter your LinkedIn Profile ID.',
+	id: 'linkedInProfileId',
+	name: 'linkedInProfileId',
+	value: settings['linkedInProfileId']})
+}}
