@@ -84,8 +84,85 @@ Both of these methods accomplish the same thing:
 
 All of the parameters except for `UPDATE_TEXT` are optional.  For more information on what these parameters are, please see [POST/updates/create](https://buffer.com/developers/api/updates)
 
+### Example Plugin
+
+Here's an example plugin that you can modify to post updates when someone posts to the "blog" channel:
+
+	<?php
+	namespace Craft;
+	
+	class ImawhalePlugin extends BasePlugin
+	{
+	    function getName()
+	    {
+	        return Craft::t('Imawhale');
+	    }
+	
+	    function getVersion()
+	    {
+	        return '1.0.0';
+	    }
+	
+	    function getDeveloper()
+	    {
+	        return 'NY Studio 107';
+	    }
+	
+	    function getDeveloperUrl()
+	    {
+	        return 'http://nystudio107.com';
+	    }
+	
+	    public function hasCpSection()
+	    {
+	        return false;
+	    }
+	
+		public function init()
+		{
+		    parent::init();
+		
+		    craft()->on('entries.onBeforeSaveEntry', function(Event $event) 
+		    {
+		        $entry = $event->params['entry'];
+		        if ($entry->section == 'Blog Entry') 
+		        {
+					$siteUrl = craft()->siteUrl;
+					$hashTag = " #imawhale";
+				    $user = craft()->users->getUserById($entry->authorId);
+				    $userName = "";
+					if ($user)
+					{
+				        $userName = $user->getFullName();
+					}
+					
+					if ($userName)
+						$userName = " " . $userName;
+						
+		            if ($event->params['isNewEntry']) 
+		            {
+						$updateString = "New Imawhale blog post “" . $entry->title . "” by" . $userName . " " . $siteUrl . "/blog/" . $entry->slug . $hashTag;
+						
+						ImawhalePlugin::log('A new blog entry has been posted: ' . $entry->title, LogLevel::Info, true);
+		
+						craft()->buffer_utils->queueBufferUpdate($updateString, true);
+		            } 
+		            else 
+		            {
+	
+		            }
+		        }
+		    }); // edited
+		}
+		
+	}
+
 ## Changelog
 
-### 1.0.0 -- 9/21/2015
+### 1.0.1 -- 2015.11.08
+
+* Updated the README with an example plugin
+
+### 1.0.0 -- 2015.09.27
 
 * Initial release
