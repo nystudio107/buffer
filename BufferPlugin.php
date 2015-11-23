@@ -2,7 +2,7 @@
 namespace Craft;
 
 class BufferPlugin extends BasePlugin
-{		
+{       
     function getName()
     {
         return Craft::t('Buffer');
@@ -23,10 +23,10 @@ class BufferPlugin extends BasePlugin
         return 'https://github.com/khalwat/buffer/blob/master/releases.json';
     }
     
-	public function getVersion()
-	{
-	    return '1.0.2';
-	}
+    public function getVersion()
+    {
+        return '1.0.2';
+    }
 
     public function getSchemaVersion()
     {
@@ -55,26 +55,26 @@ class BufferPlugin extends BasePlugin
         return new BufferTwigExtension();
     }
 
-	protected function defineSettings()
-	{
-		return array(
-			'bufferAccessToken' => array(AttributeType::String, 'label' => 'Buffer Access Token', 'default' => ''),
-			'bufferClientId' => array(AttributeType::String, 'label' => 'Buffer Client ID', 'default' => ''),
-			'bufferClientSecret' => array(AttributeType::String, 'label' => 'Buffer Client Secret', 'default' => ''),
-			'bufferRedirectUri' => array(AttributeType::String, 'label' => 'Buffer Redirect URI', 'default' => ''),
-			'twitterProfileId' => array(AttributeType::String, 'label' => 'Twitter Profile ID', 'default' => ''),
-			'facebookProfileId' => array(AttributeType::String, 'label' => 'Facebook Profile ID', 'default' => ''),
-			'googlePlusProfileId' => array(AttributeType::String, 'label' => 'Google+ Profile ID', 'default' => ''),
-			'pinterestProfileId' => array(AttributeType::String, 'label' => 'Pinterest Profile ID', 'default' => ''),
-			'linkedInProfileId' => array(AttributeType::String, 'label' => 'LinkedIn Profile ID', 'default' => ''),
-		);
-	}
+    protected function defineSettings()
+    {
+        return array(
+            'bufferAccessToken' => array(AttributeType::String, 'label' => 'Buffer Access Token', 'default' => ''),
+            'bufferClientId' => array(AttributeType::String, 'label' => 'Buffer Client ID', 'default' => ''),
+            'bufferClientSecret' => array(AttributeType::String, 'label' => 'Buffer Client Secret', 'default' => ''),
+            'bufferRedirectUri' => array(AttributeType::String, 'label' => 'Buffer Redirect URI', 'default' => ''),
+            'twitterProfileId' => array(AttributeType::String, 'label' => 'Twitter Profile ID', 'default' => ''),
+            'facebookProfileId' => array(AttributeType::String, 'label' => 'Facebook Profile ID', 'default' => ''),
+            'googlePlusProfileId' => array(AttributeType::String, 'label' => 'Google+ Profile ID', 'default' => ''),
+            'pinterestProfileId' => array(AttributeType::String, 'label' => 'Pinterest Profile ID', 'default' => ''),
+            'linkedInProfileId' => array(AttributeType::String, 'label' => 'LinkedIn Profile ID', 'default' => ''),
+        );
+    }
 
     public function getSettingsHtml()
-	{
+    {
        return craft()->templates->render('buffer/settings', array(
            'settings' => $this->getSettings()
        ));
-	}
-	
+    }
+    
 }
