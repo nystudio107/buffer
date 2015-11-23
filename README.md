@@ -159,6 +159,10 @@ Here's an example plugin that you can modify to post updates when someone posts 
 
 ## Changelog
 
+### 1.0.2 -- 2015.11.23
+
+* Added support for Craft 2.5 new plugin features
+
 ### 1.0.1 -- 2015.11.08
 
 * Updated the README with an example plugin

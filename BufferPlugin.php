@@ -8,7 +8,27 @@ class BufferPlugin extends BasePlugin
         return Craft::t('Buffer');
     }
 
-    function getVersion()
+    public function getDescription()
+    {
+        return 'Send social updates to Buffer.com via Twig templates, URLs, and plugins.';
+    }
+    
+    public function getDocumentationUrl()
+    {
+        return 'https://github.com/khalwat/buffer/blob/master/README.md';
+    }
+    
+    public function getReleaseFeedUrl()
+    {
+        return 'https://github.com/khalwat/buffer/blob/master/releases.json';
+    }
+    
+	public function getVersion()
+	{
+	    return '1.0.2';
+	}
+
+    public function getSchemaVersion()
     {
         return '1.0.0';
     }
