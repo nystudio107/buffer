@@ -1,4 +1,4 @@
-### Buffer plugin for Craft CMS
+# Buffer plugin for Craft CMS
 
 A simple plugin for integrating [Buffer](https://buffer.com) into [Craft CMS](http://buildwithcraft.com) websites, for sending out social updates from Twig templates, via a trigger URL, or from other plugins.
 
@@ -8,7 +8,7 @@ A simple plugin for integrating [Buffer](https://buffer.com) into [Craft CMS](ht
 2.  -OR- do a `git clone https://github.com/khalwat/buffer.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
 3. Install plugin in the Craft Control Panel under Settings > Plugins
 
-###Configuring Buffer###
+## Configuring Buffer###
 
 First, make sure you have [set up a Buffer account](https://buffer.com/) and see the [Buffer API](https://buffer.com/developers/api/) for details on how to set up your Buffer app for API access.
 
@@ -22,9 +22,9 @@ The string between “/profile/” & “/buffer/” is the social profile id.  I
 
 Currently Pinterest is unsupported, as the Buffer team has not provided the appropriate API access, but they say they will soon.
 
-###Using the Buffer plugin in your templates ###
+## Using the Buffer plugin in your templates
 
-##sendBufferUpdate##
+### sendBufferUpdate
 
 `sendBufferUpdate` sends the social update to Buffer immediately.  In most cases, it's better to use `queueBufferUpdate` instead, since that spins off a Craft Task that handles the update sending in the background (it can sometimes be lengthy).
 
@@ -38,7 +38,7 @@ Both of these methods accomplish the same thing:
 
 All of the parameters except for `UPDATE_TEXT` are optional.  For more information on what these parameters are, please see [POST/updates/create](https://buffer.com/developers/api/updates)
 
-##queueBufferUpdate##
+### queueBufferUpdate
 
 `queueBufferUpdate` works much like `sendBufferUpdate`, except that it spins off the social update to Buffer into a Craft Task.  Since the update process can be lengthy, this the preferred way to send updates to Buffer.
 
@@ -52,7 +52,7 @@ Both of these methods accomplish the same thing:
 
 All of the parameters except for `UPDATE_TEXT` are optional.  For more information on what these parameters are, please see [POST/updates/create](https://buffer.com/developers/api/updates)
 
-###Triggering the Buffer via URL ###
+## Triggering the Buffer via URL
 
 You can also trigger buffer updates via URL to the Buffer controller:
 
@@ -60,11 +60,11 @@ You can also trigger buffer updates via URL to the Buffer controller:
 
 All of the parameters except for `UPDATE_TEXT` are optional.  For more information on what these parameters are, please see [POST/updates/create](https://buffer.com/developers/api/updates)
 
-###Using the Buffer service in your plugins ###
+## Using the Buffer service in your plugins
 
 You can send updates to Buffer via your plugins as well.
 
-##craft()->buffer_utils->sendBufferUpdate()##
+### craft()->buffer_utils->sendBufferUpdate()
 
 `craft()->buffer_utils->sendBufferUpdate()` sends the social update to Buffer immediately.  In most cases, it's better to use `craft()->buffer_utils->queueBufferUpdate()` instead, since that spins off a Craft Task that handles the update sending in the background (it can sometimes be lengthy).
 
@@ -73,7 +73,7 @@ You can send updates to Buffer via your plugins as well.
     
 All of the parameters except for `UPDATE_TEXT` are optional.  For more information on what these parameters are, please see [POST/updates/create](https://buffer.com/developers/api/updates)
 
-##craft()->buffer_utils->queueBufferUpdate()##
+### craft()->buffer_utils->queueBufferUpdate()
 
 `craft()->buffer_utils->queueBufferUpdate()` works much like `craft()->buffer_utils->sendBufferUpdate()`, except that it spins off the social update to Buffer into a Craft Task.  Since the update process can be lengthy, this the preferred way to send updates to Buffer.
 
@@ -84,7 +84,7 @@ Both of these methods accomplish the same thing:
 
 All of the parameters except for `UPDATE_TEXT` are optional.  For more information on what these parameters are, please see [POST/updates/create](https://buffer.com/developers/api/updates)
 
-### Example Plugin
+## Example Plugin
 
 Here's an example plugin that you can modify to post updates when someone posts to the "blog" channel:
 
@@ -105,7 +105,7 @@ Here's an example plugin that you can modify to post updates when someone posts 
 	
 	    function getDeveloper()
 	    {
-	        return 'NY Studio 107';
+	        return 'nystudio107';
 	    }
 	
 	    function getDeveloperUrl()
