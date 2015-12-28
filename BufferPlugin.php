@@ -20,7 +20,7 @@ class BufferPlugin extends BasePlugin
     
     public function getReleaseFeedUrl()
     {
-        return 'https://github.com/khalwat/buffer/blob/master/releases.json';
+        return 'https://raw.githubusercontent.com/khalwat/buffer/master/releases.json';
     }
     
     public function getVersion()
