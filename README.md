@@ -1,11 +1,11 @@
 # Buffer plugin for Craft CMS
 
-A simple plugin for integrating [Buffer](https://buffer.com) into [Craft CMS](http://buildwithcraft.com) websites, for sending out social updates from Twig templates, via a trigger URL, or from other plugins.
+A plugin for integrating [Buffer](https://buffer.com) into [Craft CMS](http://buildwithcraft.com) websites, allowing you to send social updates to Twitter, Facebook, etc. through Buffer.com via Twig templates, URLs, and plugins.
 
 **Installation**
 
 1. Download & unzip the file and place the `buffer` directory into your `craft/plugins` directory
-2.  -OR- do a `git clone https://github.com/khalwat/buffer.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
+2.  -OR- do a `git clone https://github.com/nystudio107/buffer.git` directly into your `craft/plugins` folder.  You can then update it with `git pull`
 3. Install plugin in the Craft Control Panel under Settings > Plugins
 4. The plugin folder should be named `buffer` for Craft to see it.  GitHub recently started appending `-master` (the branch name) to the name of the folder for zip file downloads.
 
@@ -159,6 +159,11 @@ Here's an example plugin that you can modify to post updates when someone posts 
 	}
 
 ## Changelog
+
+### 1.0.3 -- 2016.02.03
+
+* Fixed an issue where the `[media]` array wasn't being passed down properly, which prevented you from sending images in your social media updates
+* Updated README.md
 
 ### 1.0.2 -- 2015.11.23
 

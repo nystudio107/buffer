@@ -2,7 +2,7 @@
 namespace Craft;
 
 class BufferPlugin extends BasePlugin
-{       
+{
     function getName()
     {
         return Craft::t('Buffer');
@@ -10,22 +10,22 @@ class BufferPlugin extends BasePlugin
 
     public function getDescription()
     {
-        return 'Send social updates to Buffer.com via Twig templates, URLs, and plugins.';
+        return 'Send social updates to Twitter, Facebook, etc. through Buffer.com via Twig templates, URLs, and plugins.';
     }
-    
+
     public function getDocumentationUrl()
     {
-        return 'https://github.com/khalwat/buffer/blob/master/README.md';
+        return 'https://github.com/nystudio107/buffer/blob/master/README.md';
     }
-    
+
     public function getReleaseFeedUrl()
     {
-        return 'https://raw.githubusercontent.com/khalwat/buffer/master/releases.json';
+        return 'https://raw.githubusercontent.com/nystudio107/buffer/master/releases.json';
     }
-    
+
     public function getVersion()
     {
-        return '1.0.2';
+        return '1.0.3';
     }
 
     public function getSchemaVersion()
@@ -76,5 +76,5 @@ class BufferPlugin extends BasePlugin
            'settings' => $this->getSettings()
        ));
     }
-    
+
 }
