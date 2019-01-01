@@ -1,3 +1,9 @@
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
+
+# DEPRECATED
+
+This Craft 2.x plugin is no longer supported. The license fully allows you to fork it and make changes as needed for legacy support reasons.
+
 # Buffer plugin for Craft CMS
 
 A plugin for integrating [Buffer](https://buffer.com) into [Craft CMS](http://buildwithcraft.com) websites, allowing you to send social updates to Twitter, Facebook, etc. through Buffer.com via Twig templates, URLs, and plugins.
