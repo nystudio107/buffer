@@ -2,7 +2,7 @@
 
 # DEPRECATED
 
-This Craft 2.x plugin is no longer supported. The license fully allows you to fork it and make changes as needed for legacy support reasons.
+This Craft 2.x plugin is no longer supported, but it is fully functional, and you may continue to use it as you see fit. The license also allows you to fork it and make changes as needed for legacy support reasons.
 
 # Buffer plugin for Craft CMS
 
